@@ -35,6 +35,7 @@ function App() {
     setSteps([])
     setLoading(true)
     start(initialState, goal)
+      .catch(() => alert("No hubo solución"))
       .finally(() => setLoading(false))
   }, [initialState, goal, setSteps])
 
